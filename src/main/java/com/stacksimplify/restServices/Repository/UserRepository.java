@@ -11,6 +11,9 @@ import com.stacksimplify.restServices.Entites.UserData;
 public interface UserRepository extends JpaRepository<UserData, Long> {
 
 
+
+	boolean existsByUserName(String userName);
+
 	Optional<UserData> findByUserName(String userName);
 
 }
